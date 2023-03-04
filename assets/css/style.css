@@ -5,11 +5,15 @@
     --light-grayish-blue: #ecf2f8;
 }
 body{
+    height: 100vh;
     box-sizing: border-box;
     background-color: var(--light-grayish-blue);
     font-family: 'Manrope', sans-serif;
     font-size: 13px;
     color: var(--very-dark-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 h1{
     font-size: 20px;
@@ -30,6 +34,7 @@ a{
     max-width: 731px;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0px 20px 35px #9eafc240;
 }
 .container-img{
     width: 100%;
@@ -55,12 +60,13 @@ a{
 }
 .share-icon{
     background-color: var(--light-grayish-blue);
-    padding: 13px 0px;
+    padding: 10px 0;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     justify-content: center;
     transition: all .3s ease-in-out;
+    width: 50%;
 }
 .container-share-section{
     position: relative;
@@ -72,7 +78,7 @@ a{
     opacity: 0;
     position: absolute;
     bottom: 0;
-    right: -275%;
+    right: -125%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,7 +86,7 @@ a{
     padding: 21px 37px;
     border-radius: 10px;
     width: 248px;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
     z-index: -1;
 }
 .social-media::after{
@@ -103,6 +109,9 @@ a{
 .attribution{
     font-size: 11px;
     text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 .attribution a{
     color: hsl(228, 45%, 44%);
@@ -117,4 +126,41 @@ a{
     bottom: 165%;
     opacity: 1!important;
     z-index: unset;
+}
+.social-media-opacity svg path:hover{
+    fill: var(--grayish-blue);
+    transition: all .2s ease-in-out;
+}
+
+@media (max-width: 991px){
+    .box{
+        max-width: 328px;
+    }
+    .container-img{
+        height: 13rem;
+        border-radius: 10px 10px 0 0;
+    }
+    .container-img img{
+        width: 100%;
+        height: 122%;
+    }
+    .container-info {
+        padding: 38px 25px 15px;
+    }
+    .share-icon{
+        position: absolute;
+        width: 80%;
+        padding: 12px 0;
+        top: -37px;
+    }
+    .social-media{
+        bottom: -15px;
+        right: -55%;
+        padding: 22px 120px 22px 32px;
+        border-radius: 0 0 10px 10px;
+        width: 328px;
+    }
+    .social-media::after{
+        display: none;
+    }
 }
