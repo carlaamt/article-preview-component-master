@@ -1,0 +1,120 @@
+:root{
+    --very-dark-grayish-blue: #48556a;
+    --desaturated-dark-blue: #6d7f97;
+    --grayish-blue: #9eafc2;
+    --light-grayish-blue: #ecf2f8;
+}
+body{
+    box-sizing: border-box;
+    background-color: var(--light-grayish-blue);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    color: var(--very-dark-grayish-blue);
+}
+h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+h2{
+    font-size: 13px;
+    font-weight: 700;
+}
+p{
+    font-weight: 500;
+    margin-bottom: unset;
+}
+a{
+    text-decoration: none;
+}
+.box{
+    max-width: 731px;
+    background-color: white;
+    border-radius: 10px;
+}
+.container-img{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+}
+.container-img img{
+    width: 122%;
+    height: 100%;
+}
+.container-info{
+    padding: 38px 25px;
+}
+.container-info p{
+    color: var(--desaturated-dark-blue);
+}
+.container-img-client{
+    width: 100%;
+}
+.container-img-client img{
+    width: 100%;
+    border-radius: 50%;
+}
+.share-icon{
+    background-color: var(--light-grayish-blue);
+    padding: 13px 0px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+}
+.container-share-section{
+    position: relative;
+}
+.info-client p{
+    color: var(--grayish-blue);
+}
+.social-media{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    right: -275%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--very-dark-grayish-blue);
+    padding: 21px 37px;
+    border-radius: 10px;
+    width: 248px;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+.social-media::after{
+    content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 100%;
+	left: 44%;
+	border: .75rem solid transparent;
+	border-top: none;
+    border-bottom-color: var(--very-dark-grayish-blue);
+    transform: rotateX(180deg);
+}
+.social-media p{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--grayish-blue);
+}
+.attribution{
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+.share-btn{
+    background-color: var(--desaturated-dark-blue)!important;
+}
+.share-btn .path-share{
+    fill: var(--light-grayish-blue)!important;
+}
+.social-media-opacity{
+    bottom: 165%;
+    opacity: 1!important;
+    z-index: unset;
+}
